@@ -42,3 +42,17 @@ input, select {
 .country-card:hover {
   transform: scale(1.05);
 }
+.nav-button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #0d74d1;
+}

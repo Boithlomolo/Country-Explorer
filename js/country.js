@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
     <p><strong>Languages:</strong> ${country.languages ? Object.values(country.languages).join(", ") : "N/A"}</p>
     <p><strong>Currencies:</strong> ${country.currencies ? Object.values(country.currencies).map(cur => cur.name).join(", ") : "N/A"}</p>
     <p><strong>Timezones:</strong> ${country.timezones.join(", ")}</p>
-    <p><a href="${country.maps.googleMaps}" target="_blank">View on Google Maps</a></p>
+    <p>
+    <button onclick="window.open('${country.maps.googleMaps}','_blank')"class="nav-button">
+    🌍 View on Google Maps
+    </button>
+    </p>
   `;
 });
