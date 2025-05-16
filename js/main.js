@@ -43,3 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetchCountries();
 });
+
+const favOnly = document.getElementById("fav-only");
+
+function filteredCountries() {
+  const searchVal = searchInput.value.toLowerCase();
+  const region = regionFilter.value;
+  const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+  return countries.filter(c => {
+    const matchesSearch = c.name.common.toLowerCase().includes(searchVal);
+    const matchesRegion = !region || c.region === region;
+    const isFav = !favOnly.checked || favs.includes(c.cca3);
+    return matchesSearch && matchesRegion && isFav;
+  });
+}
+
+favOnly.addEventListener("change", () => displayCountries(filteredCountries()));

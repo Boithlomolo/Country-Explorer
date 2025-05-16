@@ -114,3 +114,15 @@ select {
     width: 95%;
   }
 }
+
+.fav-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: gold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.fav-btn:hover {
+  transform: scale(1.2);
+}
